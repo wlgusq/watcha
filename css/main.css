@@ -97,7 +97,7 @@ main{
   margin: 20px 0px;
   line-height: 30px;
 }
-.main_txt > p.small{
+.main_txt > p.small, .tab > ul > li > div > p.small{
   display: block;
   font-size: 0.8rem;
   color: #eee;
@@ -129,19 +129,19 @@ main{
 
 
 /* 아티클 공통서식 */
-.aco, .recom, .tab_mnu, .write{
+.aco, .recom, .tab_mnu, .write, .tab{
   width: 1200px;
   margin: 140px auto;
   position: relative;
 }
 
-.aco > h2, .recom > h2, .tab_mnu > h2, .write > h2{
+.aco > h2, .recom > h2, .tab_mnu > h2, .write > h2, .tab > h2{
   font-size: 1.4rem;
   color: #FF0558;
   margin-bottom: 30px;
 }
 
-.aco > .plus, .recom > .plus, .tab_mnu > .plus{
+.aco > .plus, .recom > .plus, .tab_mnu > .plus, .tab > .plus{
   position: absolute;
   right: 0px; top: 0px;
 }
@@ -175,6 +175,46 @@ main{
 .btn > i{color: #fff;}
 .prev{left: 0px;}
 .next{right: 0px;}
+
+
+
+
+/* 줄거리 */
+.tab > ul > li > button{
+  background: #FF0558;
+  color:#fff;
+  padding: 7px 12px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-radius: 7px;
+}
+.hover{background: rgb(255, 5, 88, .7) !important;}
+.tab > ul > li > div{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background: rgb(255, 255, 255, .1);
+  width: 70%; height: 80%;
+  border-radius: 20px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px;
+  box-sizing: border-box;
+}
+.tab > ul > li > div > h3{
+  font-size: 30px;
+  color: #fff;
+}
+.tab > ul > li > div > p{
+  line-height: 30px;
+  color: #fff;
+}
+.small > span{color: #fff;}
+
+.tab > ul > li:not(:first-child) > div{display: none;}
+
 
 
 

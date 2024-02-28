@@ -50,6 +50,55 @@
 
 
 
+// 인기 애니 추천
+let j = 0;
+
+const l_btn = $('.prev');
+const r_btn = $('.next');
+
+r_btn.click(function(){
+  if (j == 3) {
+    j = 0;
+  } else {
+    j++;
+  }
+  console.log(j);
+  
+  $('.bath ul').animate({
+    'left': -(370 * j)
+  }, 500);
+});
+
+l_btn.click(function(){
+  if (j == 0) {
+    j = 3;
+  } else {
+    j--;
+  }
+  console.log(j);
+  
+  $('.bath ul').animate({
+    'left': -(370 * j)
+  }, 500);
+});
+
+
+
+
+// 줄거리 보기
+let btn = $('.tab > ul > li > button');
+
+btn.click(function(){
+      $(this).next().slideDown().parent().siblings().find('div').slideUp();
+      $(this).addClass('hover').parent().siblings().find('button').removeClass('hover');
+
+    return false;
+  });  
+
+
+
+
+
 
     // 아코디언
     const mnu = $('.aco > ul > li > a');
@@ -81,18 +130,5 @@
 
 
 
-
-
-  // $(window).scroll(function(){
-  //   let s_pos = $(this).scrollTop();
-  //   console.log(s_pos);
-
-  //   if(s_pos>=1400){
-  //     $()
-  //   }else{
-  //     $()
-  //   }
-
-  // });
 
 });
